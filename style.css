@@ -1,0 +1,13 @@
+main,
+form {
+  display: flex;
+}
+
+form {
+  width: 675px;
+  flex-direction: column;
+}
+
+img {
+  height: 500px;
+}
