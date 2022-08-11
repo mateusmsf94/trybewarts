@@ -28,6 +28,7 @@ main , #evaluation-form , .container {
 }
 
 #evaluation-form {
+  height: fit-content;
   width: 675px;
   flex-direction: column;
 }
@@ -43,4 +44,17 @@ ul {
 .familia {
   display: flex;
   flex-direction: column;
+}
+
+.text {
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+#counter {
+  height: 0;
+  width: 0;
+  top: -20px;
+  left: 80%;
+  position: relative;
 }

@@ -11,8 +11,20 @@ loginBtn.addEventListener('click', (event) => {
   }
 });
 
-const textArea = document.querySelector('#input-name');
+const textArea = document.querySelector('#textarea');
 
-textArea.addEventListener('keyup', () => {
-  console.log(500 - textArea.value.length);
+function counter() {
+  const count = 500 - textArea.value.length;
+  document.querySelector('#counter').innerText = count;
+}
+textArea.addEventListener('input', counter);
+
+const checkBox = document.querySelector('#agreement');
+checkBox.addEventListener('click', () => {
+  const submintBtn = document.querySelector('#submit-btn');
+  if (submintBtn.disabled) {
+    submintBtn.disabled = false;
+  } else {
+    submintBtn.disabled = true;
+  }
 });
