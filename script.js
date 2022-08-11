@@ -10,3 +10,9 @@ loginBtn.addEventListener('click', (event) => {
     alert('Email ou senha inválidos.');
   }
 });
+
+const textArea = document.querySelector('#input-name');
+
+textArea.addEventListener('keyup', () => {
+  console.log(500 - textArea.value.length);
+});
