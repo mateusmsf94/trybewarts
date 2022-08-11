@@ -17,3 +17,17 @@
   height: 100%;
   align-items: center;
 }
+
+main,
+#evaluation-form {
+  display: flex;
+}
+
+#evaluation-form {
+  width: 675px;
+  flex-direction: column;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+}
