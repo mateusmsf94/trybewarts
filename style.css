@@ -17,13 +17,23 @@
   align-items: center;
 }
 
-main , #evaluation-form {
+main , #evaluation-form , .container {
   display: flex;
+}
+
+.conteudo div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 #evaluation-form {
   width: 675px;
   flex-direction: column;
+}
+
+ul {
+  list-style: none;
 }
 
 #trybewarts-forms-logo {
