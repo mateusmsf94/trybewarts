@@ -33,6 +33,10 @@ main , #evaluation-form , .container {
   flex-direction: column;
 }
 
+#form-data {
+  width: 675px;
+}
+
 ul {
   list-style: none;
 }

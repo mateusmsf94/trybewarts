@@ -28,3 +28,34 @@ checkBox.addEventListener('click', () => {
     submintBtn.disabled = true;
   }
 });
+
+const nome = document.getElementById('input-name');
+const sobrenome = document.getElementById('input-lastname');
+const email = document.getElementById('input-email');
+const casa = document.getElementById('house');
+const form = document.getElementById('evaluation-form');
+const main = document.getElementById('main');
+const familia = document.querySelector('input[name="family"]:checked').value;
+const materias = document.querySelectorAll('.subject:checked');
+const mArr = Array.from(materias);
+const notaMarcada = document.querySelector('input[name="rate"]:checked').value;
+const comentario = document.getElementById('textarea');
+const submitBtn = document.getElementById('submit-btn');
+submitBtn.addEventListener('click', (ev) => {
+  ev.preventDefault();
+
+  const formData = document.createElement('div');
+  formData.id = 'form-data';
+  formData.innerHTML = `
+    <p>Nome: ${nome.value} ${sobrenome.value}</p>
+    <p>Email: ${email.value}</p>
+    <p>Casa: ${casa.value}</p>
+    <p>Família: ${familia}</p>
+    <p>Matérias: ${mArr.map((el) => ` ${el.value}`)}</p>
+    <p>Avaliação: ${notaMarcada}</p>
+    <p>Observações: ${comentario.value}</p>
+  `;
+
+  form.style.display = 'none';
+  main.insertBefore(formData, main.firstChild);
+});
